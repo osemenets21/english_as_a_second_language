@@ -1,0 +1,232 @@
+// Змінні для основних кольорів та шрифтів
+$primary-color: #5451db;
+$secondary-color: #f44336;
+$background-color: #f8f8f8;
+$text-color: #313745;
+$button-hover-color: darken($primary-color, 10%);
+$font-family: 'Commissioner', Arial, sans-serif;
+$border-radius: 50px;
+
+// Міксин для кнопок
+@mixin button-styles($bg-color, $text-color) {
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}
+
+// Загальні стилі
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: $font-family;
+}
+
+body {
+  max-width: 80%; /* Задаємо 80% ширини */
+  margin: 0 auto; /* Центруємо контент по горизонталі */
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+// Стилі для Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $background-color;
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.525);
+}
+
+.left-icons {
+  display: flex;
+
+
+  .contact-icon {
+    margin: 0 20px; /* Більші відступи між іконками */
+    color: $primary-color;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Ширина кола */
+    height: 40px; /* Висота кола */
+    font-size: 15px; /* Зменшено розмір іконки */
+    border: 2px solid $primary-color; /* Створюємо обводку */
+    border-radius: 50%; /* Округляємо для створення кола */
+    text-align: center;
+    transition: all .3s;
+  
+    &:hover {
+      color: white;
+      border-color: $primary-color; /* Змінюємо колір обводки при ховері */
+      background-color: $primary-color;
+    }
+  }
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+
+  h1 {
+    font-size: 32px; /* Збільшено розмір шрифта */
+    font-weight: bold;
+  }
+}
+
+.right-button {
+  button {
+    @include button-styles($primary-color, white);
+    transition: all .3s;
+    margin-left: 5px;
+
+    &:hover {
+        color: $primary-color;
+        border: 1px solid $primary-color; 
+        background-color: white;
+    }
+
+  }
+
+  .buy-bttn {
+    @include button-styles(white, $primary-color);
+    transition: all .3s;
+    margin-left: 5px;
+    border: 1px solid $primary-color;
+
+    &:hover {
+        color: white;
+        border: 1px solid white; 
+        background-color: $primary-color;
+    }
+  }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    padding: 10px 0; 
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    margin: 0 20px; 
+  }
+  
+  .navbar ul li a {
+    display: block;
+    padding: 15px;
+    color: $text-color;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: $primary-color; /* You can add a hover effect if needed */
+  }
+  
+  
+  .navbar ul li a.active {
+    background-color: $secondary-color;
+  }
+
+
+
+
+
+// HOME PAGE
+
+
+.home-page {
+  width: 100%; /* Ширина 100% для домашньої сторінки */
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 36px; /* Збільшено розмір заголовка */
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 20px; /* Збільшено розмір тексту */
+  line-height: 1.6;
+}
+
+// Стилі для форми зворотного зв'язку
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Ширина форми збільшена */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    label {
+      margin-top: 10px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+    }
+
+    button {
+      @include button-styles($primary-color, white);
+    }
+
+    .close-button {
+      @include button-styles($secondary-color, white);
+      margin-top: 10px;
+    }
+  }
+}
