@@ -1,22 +1,11 @@
 import React, { useState } from 'react';
-import ContactForm from './ContactForm'; // Імпортуємо форму зворотного зв'язку
 
 const HomePage = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false); // Стан для відображення форми
-
-  // Відкриває форму зворотного зв'язку
-  const openForm = () => {
-    setIsFormOpen(true);
-  };
-
-  // Закриває форму зворотного зв'язку
-  const closeForm = () => {
-    setIsFormOpen(false);
-  };
-
   return (
     <div className="home-page">
-     
+      <h1 className='home-page-headline'>Customized Language Training for<br /> IT <span>Professionals</span></h1>
+      <p className='home-page-content'>Individual and Group Classes with Global Educators  <br />Iste cum minima ipsa consectetur</p>
+      <button type="button" className='home-page-button'>Enroll your team</button>
     </div>
   );
 };

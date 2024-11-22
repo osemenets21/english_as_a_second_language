@@ -24,15 +24,15 @@ const ContactForm = ({ closeForm }) => {
       email: '',
       message: '',
     });
-    closeForm(); // Закриваємо форму після відправки
+    closeForm(); 
   };
 
   return (
     <div className="form-overlay">
       <div className="contact-form">
-        <h2>Зв'язатися з нами</h2>
+        <h2>Contact us</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Ім'я</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
@@ -52,7 +52,7 @@ const ContactForm = ({ closeForm }) => {
             required
           />
           
-          <label htmlFor="message">Повідомлення</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
@@ -61,9 +61,9 @@ const ContactForm = ({ closeForm }) => {
             required
           />
 
-          <button type="submit">Відправити</button>
+          <button type="submit">Send</button>
           <button type="button" className="close-button" onClick={closeForm}>
-            Закрити
+            Close
           </button>
         </form>
       </div>
