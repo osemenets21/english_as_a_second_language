@@ -1,5 +1,5 @@
-$primary-color: #5451db;
-$transparent-color: #5351db58;
+$primary-color: #4ab8d6;
+$transparent-color: #51bbdb58;
 $secondary-color: #f44336;
 $yellow-color: #e9d435bf;
 $background-color: #f8f8f8;
@@ -9,7 +9,6 @@ $button-hover-color: darken($primary-color, 10%);
 $font-family: "Commissioner", Arial, sans-serif;
 $border-radius: 50px;
 
-// Міксин для кнопок
 @mixin button-styles($bg-color, $text-color) {
   padding: 10px 20px;
   background-color: $bg-color;
@@ -23,7 +22,6 @@ $border-radius: 50px;
   }
 }
 
-// Загальні стилі
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +33,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: $font-family;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +42,7 @@ body {
   line-height: 1.6;
 }
 
-// Стилі для Header
+// Header
 #container {
    width: 80%;
    margin: 0 auto;
@@ -412,7 +411,7 @@ body {
 
   @media (max-width: 768px) {
     .contact-form {
-      width: 90%; /* Займає майже всю ширину екрана */
+      width: 90%; 
       padding: 15px;
 
       h2 {
@@ -433,7 +432,7 @@ body {
 
   @media (max-width: 576px) {
     .contact-form {
-      width: 95%; /* Ще більше адаптована ширина */
+      width: 95%;
       padding: 10px;
 
       h2 {
@@ -472,7 +471,7 @@ body {
     position: relative;
 
     span {
-      background-color: rgba(83, 81, 219, 0.3450980392);
+      background-color: $transparent-color;
       padding: 5px;
       z-index: -1;
       border-radius: 5px;
@@ -497,7 +496,6 @@ body {
     &__icon {
       width: 50px;
       height: 50px;
-      color: #5a67d8;
       margin-bottom: 15px;
     }
 
@@ -638,7 +636,7 @@ body {
     margin-bottom: 30px;
 
     .arrow-btn {
-      background-color: #f0e6ff;
+      background-color: $transparent-color;
       border: none;
       border-radius: 50%;
       width: 40px;
@@ -829,7 +827,7 @@ body {
     margin-bottom: 40px;
 
     span {
-      color: #6c63ff;
+      color: $primary-color;
     }
   }
 
@@ -867,8 +865,8 @@ body {
         position: absolute;
         top: 10px;
         right: 10px;
-        border: 2px solid #6c63ff;
-        color: #6c63ff;
+        border: 2px solid $primary-color;
+        color: $primary-color;
         font-size: 1.2rem;
         display: flex;
         align-items: center;
@@ -944,7 +942,7 @@ body {
     border-radius: 5px;
     padding: 5px 10px;
     display: inline-block;
-    background-color: rgba(83, 81, 219, 0.345);
+    background-color: $transparent-color;
   }
 
   .packages {
@@ -991,7 +989,7 @@ body {
 
   .learn-more-btn {
     padding: 15px 40px;
-    background-color: #7a76ff;
+    background-color: $primary-color;
     color: white;
     font-size: 1rem;
     border: none;
@@ -1237,19 +1235,19 @@ body {
     justify-content: center;
     gap: 2rem;
     width: 450px;
-    background-color: #e7e7ff;
+    background-color: $primary-color;
     border-radius: 10px;
     padding: 1.5rem;
     margin-bottom: 2rem;
 
     .stat {
       font-size: 1.5rem;
-      color: #4a4a4a;
+      color: white;
 
       span {
         font-size: 2rem;
         font-weight: bold;
-        color: #4a4a4a;
+        color: white;
         display: block;
       }
     }
@@ -1270,9 +1268,7 @@ body {
     }
   }
 
-  /* Media Queries for Responsiveness */
 
-  /* Large desktops (1200px and above) */
   @media (min-width: 1200px) {
     .title {
       font-size: 2rem;
@@ -1283,7 +1279,6 @@ body {
     }
   }
 
-  /* Medium desktops and tablets landscape (768px to 1199px) */
   @media (max-width: 1199px) {
     .wrapper {
       flex-direction: column;
@@ -1303,7 +1298,6 @@ body {
     }
   }
 
-  /* Tablets portrait and large mobiles (600px to 767px) */
   @media (max-width: 767px) {
     .title {
       font-size: 1.5rem;
@@ -1366,7 +1360,7 @@ body {
       content: "";
       width: 394px;
       height: 46px;
-      background-color: rgba(83, 81, 219, 0.3450980392);
+      background-color: $transparent-color;
       padding: 5px;
       border-radius: 5px;
     }
@@ -1405,9 +1399,9 @@ body {
       }
 
       .faq-toggle {
-        background-color: #e7e7ff;
+        background-color: $transparent-color;
         color: #4a4a4a;
-        border-radius: 50%;
+        border-radius: 50px;
         padding: 0.2rem 0.6rem;
         font-size: 1.25rem;
       }

@@ -30,7 +30,7 @@ const Header = () => {
       </div>
       
       <div className="title">
-        <h1>Fluent English</h1>
+        <h1>NameOfCompany</h1>
       </div>
       
       {/* Burger Menu Icon */}

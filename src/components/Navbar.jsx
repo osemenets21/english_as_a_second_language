@@ -8,9 +8,9 @@ const Navbar = () => {
       <ul>
         <li><a href="#for-companies">For Companies</a></li>
         <li><a href="#for-individuals">For Individuals</a></li>
-        <li><a href="#mini-groups">Mini Groups</a></li>
-        <li><a href="#hr-community">HR Community</a></li>
-        <li><a href="#about-me">About</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#team">Our team</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </div>
   );

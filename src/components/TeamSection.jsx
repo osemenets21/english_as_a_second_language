@@ -14,7 +14,7 @@ const TeamSection = () => {
 
   return (
     <div id="container">
-      <div className="team-section">
+      <div className="team-section" id="team">
         <h2 className="team-title">
           <span>Discover a glimpse</span>of our teaching team
         </h2>

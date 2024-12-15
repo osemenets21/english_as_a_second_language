@@ -4,7 +4,7 @@ const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const questions = [
-    "How is UnifyHub different from other language schools?",
+    "How is NameOfCompany different from other language schools?",
     "Will I be using a textbook, and if so, which one?",
     "If you work with corporate clients, do you only have Business English or General English too?",
     "Where do I do my homework?",
